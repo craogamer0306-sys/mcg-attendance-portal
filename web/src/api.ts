@@ -51,6 +51,9 @@ export async function api(path: string, options: RequestInit = {}) {
     }
   }
 
-  const ct = res.headers.get('content-type') || '';
+    const ct = res.headers.get('content-type') || '';
   return ct.includes('application/json') ? res.json() : res.text();
 }
+
+export const API_BASE = API;   // ✅ ADD THIS LINE AT THE VERY END
+
