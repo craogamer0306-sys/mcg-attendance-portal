@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+﻿from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from sqlmodel import select
 from .settings import get_settings
@@ -47,5 +47,10 @@ app.include_router(locations.router)
 app.include_router(debug.router)
 app.include_router(change_password.router)
 
-# ✅ Serve frontend (React build)
-app.mount("/", StaticFiles(directory="web/dist", html=True), name="frontend")
+# âœ… Serve frontend (React build)
+import os
+
+# Serve frontend only in local/dev when web/dist exists.
+if os.path.isdir('web/dist'):
+    app.mount('/', StaticFiles(directory='web/dist', html=True), name='frontend'), name="frontend")
+
