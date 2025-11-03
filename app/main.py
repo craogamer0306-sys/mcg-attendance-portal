@@ -52,5 +52,4 @@ import os
 
 # Serve frontend only in local/dev when web/dist exists.
 if os.path.isdir('web/dist'):
-    app.mount('/', StaticFiles(directory='web/dist', html=True), name='frontend'), name="frontend")
-
+    
