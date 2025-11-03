@@ -1,0 +1,29 @@
+﻿# Node
+node_modules/
+web/dist/
+web/.vite/
+npm-debug.log*
+yarn-error.log*
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pytest_cache/
+
+# Env & local
+.env
+.env.*
+*.sqlite
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Build/coverage
+dist/
+build/
+coverage/
